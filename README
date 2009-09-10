@@ -1,0 +1,39 @@
+jpg2bts
+-------
+
+Converts jpg to bts
+the fileformat used by Prof. Dr. Richter from Wiesbaden for the DBV Application
+DBV = Digitale Bild Verarbeitung
+
+this tool automatically scales and converts your jpg files
+tested with the DBV app 2009
+
+I assumed .bts stood for bytestream
+so it converts every pixel to grayscale between 0 (black) and 255(white)
+there was some trial&error on how the bytes need to be arranged but it worked
+
+have fun and always give credit!
+
+credits for different parts are in the source
+
+----------
+
+compiling:
+javac jpg2bts.java
+
+usage:
+java jpg2bts input.jpg
+
+developed and tested on:
+java version "1.6.0_15"
+(run java -version to see yours)
+
+for your convenience there's a jar+cmd package you can download and use
+check the downloadsection
+
+usage of jar+cmd:
+just drop your jpg onto the cmd 
+
+-----------
+thanks:
+ go to Dr1Ku for motivating me write this, half a year after I needed it. 
