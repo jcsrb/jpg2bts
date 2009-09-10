@@ -37,3 +37,11 @@ just drop your jpg onto the cmd
 -----------
 thanks:
  go to Dr1Ku for motivating me write this, half a year after I needed it. 
+
+KNOWN ISSUES:
+
+*1 jar+cmd not working under WIN7
+	ISSUE: batchfile can't access java-path
+	FIX1: run elevated (as admin)
+	FIX2: open a cmd and use it like this : java -jar jpg2bts "my.jpg"
+	
