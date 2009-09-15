@@ -34,9 +34,7 @@ public class jpg2bts {
 	// based on http://www.dreamincode.net/forums/showtopic59989.htm
 	private static void read() throws Exception {
 		File file = new File(TEMP_FILENAME);
-		BufferedImage input = ImageIO.read(file);				
-		int spalte =0;
-		int zeile = 0;
+		BufferedImage input = ImageIO.read(file);						
 		for (int x = 0; x < MAX_SPALTE; x++) {
 			for (int y = 0; y < MAX_ZEILE ; y++) {
 				Color c = new Color(input.getRGB(x, y));
@@ -45,13 +43,7 @@ public class jpg2bts {
 				//59% of the green value,
 				//11% of the blue value
 				//via http://en.wikipedia.org/wiki/Grayscale 
-				output[zeile*MAX_SPALTE+spalte] = (byte)(c.getRed()*.30+c.getGreen()*.59+c.getBlue()*.11);
-				zeile++;				
-				if(zeile==MAX_ZEILE){
-					zeile=0;
-					spalte++;
-					
-				}
+				output[y*MAX_SPALTE+x] = (byte)(c.getRed()*.30+c.getGreen()*.59+c.getBlue()*.11);				
 			}
 		}
 		
